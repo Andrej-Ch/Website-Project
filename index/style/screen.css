@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2015, 11:43:52 AM
+    Author     : eriksjenkevics
+
+    Page template : http://alistapart.com/d/fluidgrids/img/comp-areas.gif
+*/
+body {
+    background: #1E1E1E;
+}
+#page {
+    margin: 40px auto;
+    padding: 1em 1em; /* removing it solves the problem, but then page looks a bit off*/
+    max-width: 61.75em; /* 988px / 16px = 61.75em */
+    font: normal 100% Helvetica, Arial, sans-serif;
+    background: #3c3c3c;
+    color: #adadad;
+	height:100%;
+}
+img {
+    max-width: 100%;
+}
+h1 {
+    margin-left: 14.575%; /* 144px / 988 = 0.14575 */
+    width: 70.85%; /* 700px / 988px = 0.7085 */
+    font-size: 3em; /* 48px / 16px = 3em */
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.14583;	/* 55px / 48px = 1.14583 */
+	color:#D8D8D8;
+	
+}
+h2 {
+    font-size: 2.2em;
+    color:#a4a8ff;
+}
+h3 {
+    font-size: 1.4em;
+	color:#D8D8D8;
+}
+h4 {
+    font-size: 1.1em;
+    color: #a4d0fd
+}
+.entry {
+    float: left;
+    width: 100%;
+}
+.entry h2,
+.entry .content {
+    float: right;
+    width: 85.425%;  /* 844px / 988px = 0.85425 */
+}
+.content h3, .content h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    text-indent: 0px;
+}
+.entry .info {
+    float: left;
+    width: 12.551%;      /* 124px / 988px = 0.12551 */
+    font-size: 0.6875em;	/* 11px / 16px = 0.6875em */
+    font-weight: bold;
+    line-height: 1.45455;	/* 16px / 11px = 1.45455 */
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.entry .main {
+    float: left;
+    width: 82.938%;          /* 700px / 844px = 0.82938 */
+    font: normal 1em/1.375 Georgia, Times, serif;	/* 22px / 16px = 1.375 */
+    text-indent: 1.5em;	/* 24px / 16px = 1.5em */
+}
+.entry .meta {
+    float: right;
+    width: 14.692%;          /* 124px / 844px = 0.14692 */
+    font-size: 0.6875em;	/* 11px / 16px = 0.6875em */
+    font-weight: bold;
+    line-height: 1.45455;	/* 16px / 11px = 1.45455 */
+    margin-top: 0.5em;
+    opacity: 0.7;
+}
+.footer {
+	margin-top: 50px;
+    width: 22.26%;          /* 220px / 988px = 0.12551 */
+    margin-left: 38.87%;    /* 384px / 988px = 0.38866 */
+    font-size: 0.75em;
+	text-align: left;
+}
+pre {
+    text-indent: 0;
+}
+a {
+    color: #8FDFFD;
+}
+
+a:hover {
+    color: #36C;
+    text-decoration: none;
+}
+pre, code {
+    color: crimson;
+}
+table {
+    width: 100%;
+    border:#1E1E1E 5px outset;
+    font-size: 1em;
+    text-align: center;
+    text-indent: 0;
+}
+th {
+    background-color: #a4d0fd;
+    color: black;
+}
+td {
+    border-style: solid;
+    border-width: 1px;
+}
+
+body {
+	background-image: url(back3.jpg);
+}
+
+.submit {
+margin-top:50px;
+color:black;
+}

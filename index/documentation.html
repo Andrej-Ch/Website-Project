@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+The measurements of the page:
+Total width: 988px (divided in seven columns of 124px each, seperated by 20px wide gutters.
+-->
+<html>
+    <head>
+        <title>Web Technology Assignments</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="style/documentation.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="style/maps.css"/>
+        <link rel="stylesheet" type="text/css" href="style/menu.css"/>
+
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="library/app.js"></script>
+        <script src="library/form.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <div class="header">
+                <h1>Web Technology Assignments</h1>                
+            </div>
+           
+            <div class="entry" id="assign1">
+                <h2>Documentation</h2>
+                <h3 class="info">RESTful HTTP 1.1 API</h3>
+                <div class="content" id="q1.1">
+					    
+					
+	
+                    <div class="main"> 
+					<p>This API provides server stored database manipulation from the client side. It has basic functionality of creating a specific SQLite database and carry out basic functions on it.</p>
+                    <h3>Functions:</h3> 
+				<h4>GET /inventory - inventory()</h4>
+                     <p>The API fetches all the information stored in the database in a readable HTML table. The response is represented using an HTML template which, by default is the "make_table" template. The table includes functionality to add a new entry, by accessing the POST /item/new function of the API.</p>
+						
+				<h4>GET /item/id - show_item(id)</h4>
+					<p>A single entry, by specifying the id value, is retrieved from the database in an HTML table. This function uses the template "edit_task" which, by default can edit the entry, by accessing the POST /item/edit/id function. The function checks the id number provided if such an entry exists in the database, if not, the client receives a line stating that the entry does not exist and a "404 Not Found" HTTP response code.</p>
+					
+				<h4>GET /json - show_json_all()</h4>
+					<p>The contents of the database are retrieved in JSON format.</p>
+					
+				<h4>GET /json/id - show_json(id)</h4>
+					<p>A single entry from the database is retrieved in JSON format by specifying the id. The id is checked and if such an entry does not exist, an error message in JSON is received with a "404 Not Found" code.</p>
+
+				<h4>POST /item/new - add_item()</h4>
+					<p>Provides the functionality of storing an entry in the database with an HTML form. By default, this function can be accessed calling the GET /inventory function as it uses the "make_table" template. On successful submission, the "201 Created" code is returned with a line stating that the entry has been inserted. The required statement should be provided for the input form, as the database does not store empty entries by default!.</p>
+				
+				<h4>POST /json/new - new_item_json()</h4>
+					<p>Provides the functionality of storing an entry in the database already in JSON form. The required format of the JSON input is {"Name": "Banana", "Category": "Fruit", "Amount": "1", "Location": "Amsterdam", "Date": "2014-10-05", "Status": "open"}. If an object is missing or too many provided, an error message will be received with the "406 Not Accessible" code. On successful submission, a line stating this an the "201 Created" code will be returned. Note that the ID object does not need to be included as it is assigned automatically.</p>
+				<p>Common causes for errors on submission: The object names are case-sensitive (Name, instead of name). Proper use of quotes should be checked.</p>
+
+				<h4>POST /item/edit/id - submit_edited_item(id)</h4>
+					<p>Provides the functionality of editing an entry from an HTML form. Because it is meant to be used for HTML forms, this function uses the POST method, instead of PUT, which is more specific for editing purposes. On successful submission, a response line is received with the "200 OK" code.</p>
+					
+				<h4>PUT /json/edit - submit_edited_son</h4>
+					<p>Provides the functionality of editing an entry in JSON form. The required format of the input is {"ID": "1", "Name": "Banana", "Category": "Fruit", "Amount": "1", "Location": "Amsterdam", "Date": "2014-10-05", "Status": "open"}. If an object is missing, an error message will be received with the "406 Not Accessible" code. If the entry does not exist, an error message with the "404 Not Found" code will be received.</p>
+					
+				<h4>DELETE /delete/id - delete(id)</h4>
+					<p>Provides the functionality of deleting an entry from the database, by providing the id of the entry. If the entry does not exist, a "˜404 Not Found" error is received. If successful, an acknowledgement message is received.</p>
+					
+				<h4>DELETE /reset - reset()</h4>
+					<p>Resets the database, by deleting the current database file, running the script of creating a new database and restarts the server.</p>
+					
+				<h4>DELETE /clear - clear()</h4>
+					<p>Clears the database of all entries by deleting them.</p>
+
+				<h4>Extra features:</h4>
+					<p>The default database design has a "Status" entry, which accepts the value of "open" or "closed". This can be used, by slightly modifying the GET /inventory function by adding WHERE status LIKE "open" to the SQLite line to show only entries with the status "open". </p>
+					<p>The documentation can be accessed by navigating to the URI - /help</p>
+					
+					<h3>Requirements:</h3>
+					<p><a href="https://www.python.org/download/releases/2.7">Python 2.7</a> with standard libraries</p>
+					<p> Latest version of the <a href="http://bottlepy.org/docs/dev/index.html">Bottle framework</a></p>
+                    </div><!-- /end .content -->
+                </div><!-- /end .main -->
+              
+                <div class="meta">
+                    <p>Posted Sunday, January 25, 2015</p>
+                </div><!-- /end .meta -->
+            </div><!-- /end .entry -->
+            
+			
+			
+            
+			<div class="footer">2015 Ēriks Jenkēvics, Andrej Cholodov</div>
+        </div><!-- /end #page -->
+    </body>
+</html>
